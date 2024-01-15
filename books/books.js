@@ -4,14 +4,16 @@ const bodyParser=require('body-parser');
 const mongoose=require('mongoose')
 app.use(bodyParser.json())
 
+
+mongoose.connect('mongodb://127.0.0.1:27017/books');
+
+
 // call book model
 require('./BooksModel')
 const Book=mongoose.model('Book')
 
 //
 
-
-mongoose.connect('mongodb://127.0.0.1:27017/books');
 
 app.post('/books',async (req,res)=>{
     let {title,author,numberPages,publisher}=req.body;
