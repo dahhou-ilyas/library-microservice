@@ -53,7 +53,7 @@ app.put("/customers/:id",async (req,res)=>{
         customer.save()
         res.status(200).json(customer)
     }catch(e){
-        res.status(404).json({error:"book not found"})
+        res.status(404).json({error:"customers not found"})
     }
 })
 
