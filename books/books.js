@@ -15,6 +15,10 @@ const Book=mongoose.model('Book')
 //
 
 
+app.get("/",(req,res)=>{
+    res.send("test test test test")
+})
+
 app.post('/books',async (req,res)=>{
     let {title,author,numberPages,publisher}=req.body;
     const newBook=new Book({title,author,numberPages,publisher});
