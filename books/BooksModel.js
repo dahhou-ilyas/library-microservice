@@ -3,18 +3,18 @@ const mongoose=require("mongoose");
 mongoose.model('Book',{
     title:{
         type:String,
-        require:true
+        required: true
     },
     author:{
         type:String,
-        require:true
+        required: true
     },
     numberPages:{
         type:Number,
-        require:false
+        required: true
     },
     publisher:{
         type:String,
-        require:false
+        required: true
     }
 })
